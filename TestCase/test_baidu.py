@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 __author__ = 'Administrator'
 
-from baidu.baiduHq import login
+from Page.baiduHq import login
 from selenium import webdriver
 
 '''
@@ -14,6 +14,6 @@ driver = webdriver.Chrome(chrome_options=options)
 
 driver.maximize_window()
 driver.implicitly_wait(15)
-driver.get('https://www.baidu.com')
+driver.get('https://www.Page.com')
 login(driver, 'xxxxx', 'xxxxx')
 driver.quit()
