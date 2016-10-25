@@ -3,6 +3,7 @@
 __author__ = 'Administrator'
 
 import time
+
 def wait():
 	time.sleep(3)
 

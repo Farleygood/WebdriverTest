@@ -14,6 +14,6 @@ driver = webdriver.Chrome(chrome_options=options)
 
 driver.maximize_window()
 driver.implicitly_wait(15)
-driver.get('https://www.Page.com')
+driver.get('https://www.baidu.com')
 login(driver, 'xxxxx', 'xxxxx')
 driver.quit()
