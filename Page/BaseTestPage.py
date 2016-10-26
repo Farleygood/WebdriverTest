@@ -7,6 +7,8 @@ from appium import webdriver
 import unittest
 import os
 
+PATH = lambda p:os.path.abspath(os.path.join(os.path.dirname(__file__),p))
+
 class BaseTestCase(unittest.TestCase):
     
     def Setup(self):
@@ -20,7 +22,7 @@ class BaseTestCase(unittest.TestCase):
         
 class AppTestCase(unittest.TestCase):
     def setUp(self):
-        desired_caps={}
+        desired_caps = {}
         desired_caps['platformName']='Android'
         desired_caps['platformVersion']='4.4.4'
         desired_caps['deviceName']='m2'
@@ -28,7 +30,7 @@ class AppTestCase(unittest.TestCase):
         # desired_caps['appActivity']='com.taobao.ecoupon.activity.PortalActivity'
         desired_caps['unicodeKeyboard']=True
         desired_caps['resetKeyboard']=True
-        desired_caps['app']=PATH('C:\\ddandroid_206200.apk')
+        desired_caps['app'] = PATH('C:\\ddandroid_206200.apk')
         self.driver=webdriver.Remote("http://127.0.0.1:4723/wd/hub",desired_caps)
 
     def tearDown(self):
