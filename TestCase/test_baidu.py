@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 __author__ = 'Administrator'
 
-from baidu.baiduHq import login
+from Page.baiduHq import login
 from selenium import webdriver
 
 '''
