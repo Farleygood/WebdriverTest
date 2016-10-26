@@ -9,4 +9,3 @@ Page:对象层的包
 Report:测试报告目录
 allTests:执行所有测试模块的文件
 
-增加测试commit&push
