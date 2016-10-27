@@ -39,12 +39,12 @@ class CtoPage(Page):
 		self.find_element(*self.error_loc).text
 
 	# 登录函数
-	def Login(self,username,password):	
+	def Login(self,username,password):
 		self.wait
 		self.doLogin(username, password)
 		return Message_Count(self.driver)
 		
-	def doLogin(self,username,password):	
+	def doLogin(self,username,password):
 		self.Click()
 		self.getUserTextField(username)
 		self.getPasswordField(password)
