@@ -16,7 +16,7 @@ class CtoPage(Page):
 	password_loc = (By.ID,"loginform-password")
 	clickButton_loc = (By.XPATH,'//*[@id="login-form"]/div[3]/input')
 	error_loc = (By.XPATH,'//*[@id="login-form"]/div[2]/div/div')
-	
+
 	def Click(self):
 		self.wait
 		self.find_element(*self.click_loc).click()
