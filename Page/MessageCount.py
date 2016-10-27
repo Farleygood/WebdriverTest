@@ -4,7 +4,7 @@ __author__ = 'Administrator'
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from BasePage import Page
+from Page.BasePage import Page
 
 class Message_Count(Page):
     
@@ -12,5 +12,5 @@ class Message_Count(Page):
     
     def GetMessageCount(self):
         self.wait
-        return self.find.driver_element(*self.message_loc).text
+        return self.find_element(*self.message_loc).text
     
