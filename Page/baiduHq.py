@@ -21,20 +21,20 @@ class CtoPage(Page):
 		self.wait
 		self.find_element(*self.click_loc).click()
 	
-	def getUserTextField(driver,username):
+	def getUserTextField(self,username):
 		self.wait
 		self.find_element(*self.userName_loc).send_keys(username)
 
-	def getPasswordField(driver,password):	
+	def getPasswordField(self,password):
 		self.wait
 		self.find_element(*self.password_loc).send_keys(password)
 	
-	def getSubmitButton(driver):
+	def getSubmitButton(self):
 		self.wait
 		self.find_element(*self.clickButton_loc).click()
 
 	# 获取登录错误的提示信息	
-	def GetErrorText(driver):
+	def GetErrorText(self):
 		self.wait
 		self.find_element(*self.error_loc).text
 
