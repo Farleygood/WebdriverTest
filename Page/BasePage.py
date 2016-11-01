@@ -8,7 +8,7 @@ from selenium.webdriver.support.expected_conditions import NoSuchElementExceptio
 from selenium.webdriver.common.by import By
 import time as t
 
-class Page(object):
+class Page_Loc(object):
     
     def __init__(self,driver):
         self.driver = driver
