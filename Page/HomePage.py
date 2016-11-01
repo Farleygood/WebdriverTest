@@ -9,7 +9,7 @@ from BasePage import Page
 from MessageCount import Message_Count
 from selenium.webdriver.common.action_chains import ActionChains
 
-class CtoPage(Page):
+class BlogHomePage(Page):
 	
 	click_loc = (By.XPATH,'//*[@id="login-form"]/div[3]/input')
 	userName_loc = (By.ID,"loginform-username")
@@ -38,7 +38,7 @@ class CtoPage(Page):
 		self.wait
 		self.find_element(*self.error_loc).text
 
-	# 登录函数
+	# 登录函数,登录成功后返回消息总数
 	def Login(self,username,password):
 		self.wait
 		self.doLogin(username, password)
