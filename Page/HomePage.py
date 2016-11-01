@@ -5,11 +5,11 @@ __author__ = 'Administrator'
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from BasePage import Page
+from BasePage import Page_Loc
 from MessageCount import Message_Count
 from selenium.webdriver.common.action_chains import ActionChains
 
-class BlogHomePage(Page):
+class LoginHomePage(Page_Loc):
 	
 	click_loc = (By.XPATH,'//*[@id="login-form"]/div[3]/input')
 	userName_loc = (By.ID,"loginform-username")

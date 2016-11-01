@@ -4,9 +4,9 @@ __author__ = 'Administrator'
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from Page.BasePage import Page
+from Page.BasePage import Page_Loc
 
-class Message_Count(Page):
+class Message_Count(Page_Loc):
     
     message_loc = (By.XPATH,'//*[@id="login_status"]/div/a[2]')
     
