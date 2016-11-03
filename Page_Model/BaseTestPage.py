@@ -4,18 +4,19 @@ __author__ = 'Administrator'
 
 from selenium import webdriver
 from appium import webdriver
-import unittest
-import os
+import unittest,os,LogConfig
 
-PATH = lambda p:os.path.abspath(os.path.join(os.path.dirname(__file__),p))
+# PATH = lambda p:os.path.abspath(os.path.join(os.path.dirname(__file__),p))
 
 class BaseTestCase(unittest.TestCase):
     
     def Setup(self):
+        LogConfig.logging.info(u'运行driver……')
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
         self.driver.get('http://www.51cto.com/')
         self.driver.implicitly_wait(10)
+        LogConfig.logging.info(u'运行driver完毕……')
         
     def tearDown(self):
         self.driver.quit()
