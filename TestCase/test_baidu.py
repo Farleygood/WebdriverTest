@@ -1,33 +1,23 @@
-
+#!/usr/bin/env python
 # -*- coding:utf-8 -*-
 __author__ = 'Administrator'
 
-from selenium import webdriver
-from BaseTestPage import BaseTestCase
-from HomePage import LoginHomePage
-from BasePage import Page_Loc
-from MessageCount import Message_Count
-import time as t
-import unittest,logging
+from Page_Model.HomePage import LoginHomePage
+import logging,unittest
+from Page_Model.BaseTestPage import BaseTestCase
 
-#这里为什么不导入LogConfig模块，直接使用logging也可以，其他地方就一定要导入LogConfig模块呢？没搞明白
-class MyCtoBlog():
+class MyCtoBlog(BaseTestCase, LoginHomePage):
 
     logging.info(u'logging info: 运行测试用例')
-    RunSetup = BaseTestCase()
-    RunSetup.Setup(self.drvier)
-    
-    '''测试51cto登录成功后返回消息总数'''
-    def test_001(self,username = 'zshzx@126.com',password='XXXXX'):
-        
-        LoginHomePage.login(self.driver,username,password)
-    RunSetup.tearDown()
-           
-    logging.info(u'运行测试用例完毕') 
-    logging.info('testabcccccc56598465')
-    
-    
-# '''
+    def test_001(self, username ='zshzx@126.com',password='222223'):
+        ''' 测试51cto登录成功后返回消息总数 '''
+        self.doLogin(username, password)
+    logging.info(u'运行测试用例完毕')
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
+
+
 # 忽略打开浏览器时提示 ignore-certificate-errors
 # '''
 # options = webdriver.ChromeOptions()
