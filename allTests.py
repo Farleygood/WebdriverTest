@@ -6,6 +6,7 @@ __author__ = 'Administrator'
 import unittest,os,sys,HTMLTestRunner,time
 import logging
 from Model import LogConfig
+import time
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
