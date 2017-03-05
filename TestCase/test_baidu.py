@@ -5,13 +5,17 @@ __author__ = 'Administrator'
 from Page_Model.HomePage import LoginHomePage
 import logging,unittest
 from Page_Model.BaseTestPage import BaseTestCase
+import time as t
+from Page_Model.MessageCount import Message_Count
 
 class MyCtoBlog(BaseTestCase, LoginHomePage):
 
     logging.info(u'logging info: 运行测试用例')
-    def test_001(self, username ='zshzx@126.com',password='222223'):
+    def test_001(self, username ='zshzx@126.com',password='xxxxx'):
         ''' 测试51cto登录成功后返回消息总数 '''
         self.doLogin(username, password)
+        t.sleep(8)
+        Message_Count(self.driver).GetMessageCount()
     logging.info(u'运行测试用例完毕')
 
 if __name__ == '__main__':
