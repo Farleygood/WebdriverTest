@@ -3,10 +3,10 @@
 
 __author__ = 'Administrator'
 
-import unittest,os,sys,HTMLTestRunner,time
-import logging
-from Model import LogConfig
+import unittest,sys,HTMLTestRunner
+# import logging
 import time
+from Model.LogConfig import logging
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
