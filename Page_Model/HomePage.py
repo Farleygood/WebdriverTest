@@ -2,12 +2,9 @@
 # -*- coding:utf-8 -*-
 __author__ = 'Administrator'
 
-import time
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from BasePage import WebUI
-from MessageCount import Message_Count
-from selenium.webdriver.common.action_chains import ActionChains
+# from MessageCount import Message_Count
 
 class LoginHomePage(WebUI):
 
@@ -42,10 +39,10 @@ class LoginHomePage(WebUI):
     def Login(self,username,password):
         self.wait
         self.doLogin(username, password)
-        return Message_Count(self.driver)
+        # self.Message_Count(self.driver)
 
     def doLogin(self,username,password):
-        self.Click()
+        self.wait
         self.getUserTextField(username)
         self.getPasswordField(password)
         self.getSubmitButton()
