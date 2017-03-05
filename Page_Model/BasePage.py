@@ -5,7 +5,6 @@ __author__ = 'Administrator'
 from selenium.webdriver.support.expected_conditions import NoSuchElementException
 import time as t
 
-'''
 class Page_Loc(object):
 
     def __init__(self, driver):
@@ -20,7 +19,6 @@ class Page_Loc(object):
     @property
     def wait(self):
         t.sleep(3)
-'''
 
 class Factory(object):
     def __init__(self,driver):
@@ -58,7 +56,7 @@ class WebDdriver(object):
 
     @property
     def wait(self):
-        t.sleep(2)
+        t.sleep(3)
 
 class WebUI(WebDdriver):
     def __str__(self):
