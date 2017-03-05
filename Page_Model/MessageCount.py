@@ -12,4 +12,6 @@ class Message_Count(WebUI):
     
     def GetMessageCount(self):
         self.wait
-        return self.driver.find_element(*self.message_loc).text
+        logging.info(u'打印未读消息数')
+        msg = self.driver.find_element(*self.message_loc).text
+        print msg
