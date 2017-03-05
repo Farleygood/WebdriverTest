@@ -13,6 +13,10 @@ class BaseTestCase(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
+        # 忽略google浏览器打开时的提示信息
+        # options = webdriver.ChromeOptions()
+        # options.add_experimental_option("excludeSwitches", ["ignore-certificate-errors"])
+        # self.driver = webdriver.Chrome(chrome_options=options)
         self.driver.maximize_window()
         self.driver.get('http://home.51cto.com/index?reback=http://www.51cto.com/')
         self.driver.implicitly_wait(30)
